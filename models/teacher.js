@@ -23,6 +23,7 @@ const teacherSchema = new Schema({
   teacherEmail: {
     type: String,
     required: true,
+    unique: true,
   },
   teacherMobile: {
     type: Number,
@@ -37,6 +38,6 @@ const teacherSchema = new Schema({
     required: true,
   },
 });
-const Teacher = mongoose.model("Student", teacherSchema);
+const Teacher = mongoose.model("Teacher", teacherSchema);
 
 module.exports = Teacher;
