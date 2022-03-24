@@ -14,10 +14,8 @@ const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(
   MONGODB_URI,
   {
-   
-    useNewUrlParser:true,
+    useNewUrlParser: true,
     useUnifiedTopology: true,
-    
   },
   (error) => {
     if (error) {
@@ -34,9 +32,11 @@ app.route("/").get((req, res) => {
   res.send("malith");
 });
 
-const studentRouter=require("./routes/student.js");
+const studentRouter = require("./routes/student.js");
+const teacherRouter = require("./routes/teachers.js");
 
-app.use("/student",studentRouter);
+app.use("/student", studentRouter);
+app.use("/teacher", teacherRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on PORT ${PORT}`);
