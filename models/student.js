@@ -3,7 +3,7 @@ const { stringify } = require('nodemon/lib/utils');
 const Schema = mongoose.Schema;
 
 const studentSchema=new Schema({
-    sname:{
+    stuName:{
         type:String,
         required:true
 
