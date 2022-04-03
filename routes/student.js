@@ -4,7 +4,7 @@ let Student=require("../models/student");
 
 
 router.route("/add").post((req,res)=>{
-    const sname=req.body.sname;
+    const stuName=req.body.stuName;
     const nic=req.body.nic;
     const gender=req.body.gender;
     const address=req.body.address;
@@ -12,7 +12,7 @@ router.route("/add").post((req,res)=>{
     const mobile=Number(req.body.mobile);
     
     const newStudent=new Student({
-        sname,
+        stuName,
         nic,
         gender,
         address,
@@ -51,9 +51,9 @@ router.route('/:id').get((req, res) => {
 
   router.route('/update/:id').put(async(req, res) => {
     let studentId=req.params.id;
-    const{sname,nic,gender,address,email,mobile}=req.body;
+    const{stuName,nic,gender,address,email,mobile}=req.body;
     const updateStudent= {
-        sname,
+        stuName,
         nic,
         gender,
         address,
