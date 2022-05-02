@@ -34,6 +34,9 @@ app.route("/").get((req, res) => {
   res.send("malith");
 });
 
+const studentMarkRouter = require("./routes/mark.js");
+
+app.use("/mark", studentMarkRouter);
 const studentRouter = require("./routes/student.js");
 
 app.use("/student", studentRouter);
