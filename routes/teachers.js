@@ -6,6 +6,7 @@ router.route("/add").post(async (req, res) => {
   const teacherName = req.body.teacherName;
   const teacherNic = req.body.teacherNic;
   const teacherGender = req.body.teacherGender;
+  const teacherBirthDate = req.body.teacherBirthDate;
   const teacherEmail = req.body.teacherEmail;
   const teacherMobile = Number(req.body.teacherMobile);
   const teacherSubject = req.body.teacherSubject;
@@ -15,6 +16,7 @@ router.route("/add").post(async (req, res) => {
     teacherName,
     teacherNic,
     teacherGender,
+    teacherBirthDate,
     teacherEmail,
     teacherMobile,
     teacherSubject,
@@ -53,6 +55,7 @@ router.route("/update/:id").put(async (req, res) => {
   const teacherName = req.body.teacherName;
   const teacherNic = req.body.teacherNic;
   const teacherGender = req.body.teacherGender;
+  const teacherBirthDate = req.body.teacherBirthDate;
   const teacherEmail = req.body.teacherEmail;
   const teacherMobile = Number(req.body.teacherMobile);
   const teacherSubject = req.body.teacherSubject;
@@ -62,6 +65,7 @@ router.route("/update/:id").put(async (req, res) => {
     teacherName,
     teacherNic,
     teacherGender,
+    teacherBirthDate,
     teacherEmail,
     teacherMobile,
     teacherSubject,

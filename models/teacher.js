@@ -15,10 +15,10 @@ const teacherSchema = new Schema({
     type: String,
     required: true,
   },
-  //   teacherBirthDate: {
-  //     type: Date,
-  //     required: true,
-  //   },
+  teacherBirthDate: {
+    type: Date,
+    required: true,
+  },
 
   teacherEmail: {
     type: String,
