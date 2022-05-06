@@ -35,6 +35,14 @@ app.route("/").get((req, res) => {
 });
 
 const studentRouter = require("./routes/student.js");
+const teacherRouter = require("./routes/teachers.js");
+
+app.use("/student", studentRouter);
+app.use("/teacher", teacherRouter);
+const studentMarkRouter = require("./routes/mark.js");
+
+app.use("/mark", studentMarkRouter);
+// const studentRouter = require("./routes/student.js");
 
 app.use("/student", studentRouter);
 app.use("/timetable", timetableRouter);
