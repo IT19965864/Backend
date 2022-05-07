@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 8070;
 const MONGODB_URI = process.env.MONGODB_URI;
 
 const timetableRouter = require("./routes/timetableRoutes");
+const loginRouter = require("./routes/loginRoutes");
 
 mongoose.connect(
   MONGODB_URI,
@@ -46,6 +47,7 @@ app.use("/mark", studentMarkRouter);
 
 app.use("/student", studentRouter);
 app.use("/timetable", timetableRouter);
+app.use("/auth", loginRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on PORT ${PORT}`);
