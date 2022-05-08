@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { stringify } = require("nodemon/lib/utils");
 const Schema = mongoose.Schema;
-
+const jwt = require("jsonwebtoken");
 const studentMarkSchema = new Schema({
   nicno: {
     type: String,
@@ -37,6 +37,13 @@ const studentMarkSchema = new Schema({
     required: false,
   },
 });
+
+// studentMarkSchema.methods.generateAuthToken = function () {
+//   const token = jwt.sign({ _id: this._id }, process.env.JWTPRIVATEKEY, {
+//     expiresIn: "10d",
+//   });
+//   return token;
+// };
 const StudentMark = mongoose.model("StudentMark", studentMarkSchema);
 
 module.exports = StudentMark;
